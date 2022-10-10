@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".ui.menu.GameModeActivity">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        tools:text="@string/text_name_example"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:fontFamily="@font/pixelated_font"
+        app:layout_constraintBottom_toTopOf="@id/tv_sub_title"
+       />
+
+    <TextView
+        android:id="@+id/tv_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="@string/text_sub_title"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:fontFamily="@font/pixelated_font"
+        app:layout_constraintBottom_toTopOf="@+id/iv_vs_computer"/>
+
+    <ImageView
+        android:id="@+id/iv_vs_computer"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/ic_vs_computer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_vs_computer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/pixelated_font"
+        android:text="@string/text_vs_computer"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/iv_vs_computer"
+        app:layout_constraintStart_toStartOf="@+id/iv_vs_computer"
+        app:layout_constraintTop_toBottomOf="@id/iv_vs_computer" />
+
+    <ImageView
+        android:id="@+id/iv_vs_player"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        android:src="@drawable/ic_vs_player"/>
+
+    <TextView
+        android:id="@+id/tv_vs_player"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/pixelated_font"
+        android:text="@string/player_vs_player"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/iv_vs_player"
+
+        app:layout_constraintStart_toStartOf="@+id/iv_vs_player"
+        app:layout_constraintTop_toBottomOf="@id/iv_vs_player" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
